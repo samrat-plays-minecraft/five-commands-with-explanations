@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> 5 Commands Used </title>
+        <style>
+            body{
+                font-family: Montserrat;
+                background-color: blue;
+                color: white;
+            }
+            .numbering{
+                background-color: black;
+                padding: 5px;
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+            .syntax{
+                border: purple;
+                border-style: solid;
+                border-width: 1px;
+                background-color: pink;
+                color: purple;
+                margin-left: 5px;
+                padding: 5px;
+            }
+            .command-title{
+                border: darkgreen;
+                border-style: solid;
+                border-width: 1px;
+                background-color: greenyellow;
+                color: darkgreen;
+                margin-left: 5px;
+                padding: 5px;
+                margin-right: 1100px;
+            }
+            .explanation{
+                margin-left: 5px;
+            }
+            .line-break{
+                border-color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align: center; color: white; border-bottom: white; border-bottom-style: double;"> 
+        5 Commands with Explanations! </h1>
+
+        <h3 class="numbering" style="margin-right: 1000px;"> 1. Instant bridge using snowballs </h3>
+
+	    <p class="syntax" style="margin-right: 500px;">/execute @e[type={entityName}] ~ ~ ~ fill ~ ~{number} ~ ~{number} ~{number} ~{number} {blockName}</p>
+	
+        <p class="explanation">/execute - Executes a command on behalf of one or more entities. <br><br>
+	    @e means all entities. <br><br>
+	    "type" is the entity type (Example= cow, zombie) <br><br>
+	    entityName is the entity type value. <br><br>
+	    ~ means the current position. <br><br>
+	    /fill - Fills specific areas (within user-entered coordinates) with specific blocks.<br><br>
+	    ~number means block coordinates added/subtracted in their current position.<br><br>
+	    blockName is the block name (Example= diamond_block, stone).</p>
+	
+	    <p class="command-title"><b>Command used:</b></p>
+
+	    <p class="explanation">/execute @e[type=snowball] ~ ~ ~ fill ~ ~-1 ~ ~-1 ~-1 ~-1 diamond_block</p>
+
+        <hr class="line-break">
+
+        <h3 class="numbering" style="margin-right: 1150px;">2. Converyor belt</h3>
+
+        <p class="syntax" style="margin-right: 650px;">/execute @e ~ ~ ~ detect ~ ~{number} ~ {blockName} {dataValue} tp ~ ~ ~{number}</p>
+
+        <p class="explanation">
+            /execute - Executes a command on behalf of one or more entities.<br><br>
+            @e means all entities.<br><br>
+            ~ means the current position.<br><br>
+            /detect - Detects blocks at specific coordinates.<br><br>
+            ~number means block coordinates added/subtracted in their current position.<br><br>
+            blockName is the block name (Example= diamond_block, stone).<br><br>
+            dataValue means specific blocks of same type (Example= planks: 0 is oak, 1 is spruce, 2 is birch).<br><br>
+            /tp means teleport command.
+        </p>
+
+        <p class="command-title"><b>Commands used:</b></p>
+
+        <p class="explanation">
+            /execute @e ~ ~ ~ detect ~ ~-1 ~ magenta_glazed_terracotta 2 tp ~ ~ ~0.4<br><br>
+            /execute @e ~ ~ ~ detect ~ ~-1 ~ magenta_glazed_terracotta 3 tp ~ ~ ~-0.4<br><br>
+            /execute @e ~ ~ ~ detect ~ ~-1 ~ magenta_glazed_terracotta 4 tp ~0.4 ~ ~<br><br>
+            /execute @e ~ ~ ~ detect ~ ~-1 ~ magenta_glazed_terracotta 5 tp ~-0.4 ~ ~
+        </p>
+
+        <hr class="line-break">
+
+        <h3 class="numbering" style="margin-right: 1150px;">3. Dynamite bow</h3>
+
+        <p class="syntax" style="margin-right: 500px;">/execute @e[type={entityName}] ~ ~ ~ summon {entityName}</p>
+
+        <p class="explanation">
+                /execute - Executes a command on behalf of one or more entities.<br><br>
+                @e means all entities.<br><br>
+                "type" is the entity type (Example= cow, zombie)<br><br>
+                entityName is the entity type value.<br><br>
+                ~ means the current position.<br><br>
+                /summon - Summons an entity.
+        </p>
+
+        <p class="command-title"><b>Command used:</b></p>
+
+        <p class="explanation">/execute @e[type=arrow] ~ ~ ~ summon tnt</p>
+
+        <hr class="line-break">
+
+        <h3 class="numbering" style="margin-right: 1050px;">4. Auto-generating parkour</h3>
+
+        <p class="syntax" style="margin-right: 540px;">/execute @e ~ ~ ~ detect ~ ~{number} ~ {blockName} {dataValue} title @p actionbar {stringValue}</p>
+
+        <p class="explanation">
+            /execute - Executes a command on behalf of one or more entities.<br><br>
+            @e means all entities.<br><br>
+            ~ means the current position.<br><br>
+            /detect - Detects blocks at specific coordinates.<br><br>
+            ~number means block coordinates added/subtracted in their current position.<br><br>
+            blockName is the block name (Example= diamond_block, stone).<br><br>
+            dataValue means specific blocks of same type (Example= planks: 0 is oak, 1 is spruce, 2 is birch).<br><br>
+            /title - Displays title.<br><br>
+            @p means the nearest player.<br><br>
+            actionbar means the item name area.<br><br>
+            stringValue means the text.
+        </p>
+
+        <p class="syntax" style="margin-right: 940px;">/playsound {soundName} @p ~ ~ ~ {volume}</p>
+
+        <p class="explanation">
+            /playsound - Plays a sound.<br><br>
+            soundName is the sound name (Example= random.levelup, mob.zombie.say).<br><br>
+            @p means the nearest player.<br><br>
+            ~ means the current position.<br><br>
+            volume is a number value which defines the volume of the sound to be played.
+        </p>
+
+        <p class="syntax" style="margin-right: 950px;">/setblock x y z {blockName} {dataValue}</p>
+
+        <p class="explanation">
+            /setblock - Places a specific block on specific coordinates.<br><br>
+            x y z are the coordinate values.<br><br>
+            blockName is the block name (Example= diamond_block, stone).<br><br>
+            dataValue means specific blocks of same type (Example= planks: 0 is oak, 1 is spruce, 2 is birch).
+        </p>
+
+        <p class="syntax" style="margin-right: 880px;">/fill {start= x y z} {end= x y z} {blockName} {dataValue}</p>
+
+        <p class="explanation">
+            /fill - Fills specific areas (within user-entered coordinates) with specific blocks.<br><br>
+            {start= x y z} are the starting coordinates.<br><br>
+            {end= x y z} are the ending coordinates.<br><br>
+            blockName is the block name (Example= diamond_block, stone).<br><br>
+            dataValue means specific blocks of same type (Example= planks: 0 is oak, 1 is spruce, 2 is birch).
+        </p>
+
+        <p class="command-title"><b>Commands used:</b></p>
+
+        <p class="explanation">
+            /execute @e ~ ~ ~ detect ~ ~-1 ~ concrete 14 title @p actionbar §aLoading...<br><br>
+            /setblock x y z concrete 5<br><br>
+            /fill x y z x y z concrete 5<br><br>
+            /playsound soundName @p ~ ~ ~ 1<br><br>
+            /give @p water_bucket<br><br>
+            /gamemode survival @p
+        </p>
+
+        <hr>
+
+        <h3 class="numbering" style="margin-right: 1195px;">5. Magic tree</h3>
+
+        <p class="syntax" style="margin-right: 1100px;">/testfor @p[r={number}]</p>
+        <p class="syntax" style="margin-right: 1100px;">/testfor @p[rm={number}]</p>
+
+        <p class="explanation">
+            /testfor - Tests for entities in/out a radius.<br><br>
+            @p means the nearest player.<br><br>
+            "r" means in a radius.<br><br>
+            "rm" means outside a radius.
+        </p>
+
+        <p class="syntax" style="margin-right: 950px;">/setblock x y z {blockName} {dataValue}</p>
+
+        <p class="explanation">
+            /setblock - Places a specific block on specific coordinates.<br><br>
+            x y z are the coordinate values.<br><br>
+            blockName is the block name (Example= diamond_block, stone).<br><br>
+            dataValue means specific blocks of same type (Example= planks: 0 is oak, 1 is spruce, 2 is birch).
+        </p>
+
+        <p class="syntax" style="margin-right: 880px;">/fill {start= x y z} {end= x y z} {blockName} {dataValue}</p>
+
+        <p class="explanation">
+            /fill - Fills specific areas (within user-entered coordinates) with specific blocks.<br><br>
+            {start= x y z} are the starting coordinates.<br><br>
+            {end= x y z} are the ending coordinates.<br><br>
+            blockName is the block name (Example= diamond_block, stone).<br><br>
+            dataValue means specific blocks of same type (Example= planks: 0 is oak, 1 is spruce, 2 is birch).
+        </p>
+
+        <p class="command-title"><b>Commands used:</b></p>
+
+        <p class="explanation">
+            /testfor @p[r=2]<br><br>
+            /testfor @p[rm=2]<br><br>
+            /fill x y zx y z wood 0<br><br>
+            /fill x y z x y z leaves 0<br><br>
+            /setblock x y z sapling 0
+        </p>
+        <hr class="line-break">
+        <h1></h1>
+    </body>
+</html>
